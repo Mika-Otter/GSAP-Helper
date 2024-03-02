@@ -1,3 +1,13 @@
+$bgColor: #1a1818;
+$white: #f6f6df;
+$primaryColor: #63f574;
+$secondaryColor: #f14025;
+
+$headlineBig: clamp(5rem, 9.9vw, 15rem);
+$headlineMedium: clamp(1rem, 2vw, 4rem);
+$headlineSmall: clamp(0.6rem, 0.75vw, 1.3rem);
+$space: clamp(0.9rem, 0.75vw, 1.3rem);
+
 html,
 body,
 * {
@@ -5,17 +15,6 @@ body,
     padding: 0;
     box-sizing: border-box;
     background-color: $bgColor;
-}
-
-:root {
-    $bgColor: #1a1818;
-    $white: #f6f6df;
-    $primaryColor: #63f574;
-
-    $headlineBig: clamp(5rem, 9.9vw, 15rem);
-    $headlineMedium: clamp(1rem, 2vw, 4rem);
-    $headlineSmall: clamp(0.9rem, 1.5vw, 1.9rem);
-    $space: clamp(0.9rem, 0.75vw, 1.3rem);
 }
 
 .header {

@@ -1,0 +1,14 @@
+@import "../src/global.module.scss";
+
+.footer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer span {
+    font-family: "Poppins";
+    font-size: $headlineBig;
+    color: $white;
+}

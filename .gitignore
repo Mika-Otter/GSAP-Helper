@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+horizntal-scroll-responsive
+components/box
+reverse-timeline-onclick

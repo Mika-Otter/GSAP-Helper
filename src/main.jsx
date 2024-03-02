@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "../horizontal-scroll-responsive/main";
+import App from "../horizontal-and-overlay";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
