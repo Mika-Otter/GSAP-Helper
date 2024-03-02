@@ -11,9 +11,9 @@ node_modules
 dist
 dist-ssr
 *.local
-horizontal-scroll-responsive
+horizontalScrollResponsive
 components/box
-reverse-timeline-onclick
+reverseTimelineOnclick
 
 # Editor directories and files
 .vscode/*
