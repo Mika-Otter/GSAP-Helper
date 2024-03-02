@@ -10,7 +10,7 @@ import BiggerPage from "../components/BiggerPage";
 
 import s from "../src/global.module.scss";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function App() {
     let sections = document.querySelectorAll(".overlaySection");

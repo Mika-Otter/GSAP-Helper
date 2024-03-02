@@ -5,7 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useGSAP } from "@gsap/react";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function ScrollSection() {
     const sectionRef = useRef(null);
