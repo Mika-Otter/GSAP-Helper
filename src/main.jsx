@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "../scroll-move-resize-box/main";
+import App from "../horizontal-scroll-responsive/main";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
     <React.StrictMode>
