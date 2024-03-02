@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import s from "./scrollSection.module.scss";
 
 import gsap from "gsap";
@@ -35,8 +35,8 @@ export default function ScrollSection() {
 
     return (
         <section className={s.scroll__section_box}>
-            <div ref={triggerRef}>
-                <div className={s.scroll__section_ctn}>
+            <div ref={sectionRef}>
+                <div className={s.scroll__section_ctn} ref={triggerRef}>
                     <div className={s.scroll__ctn}>
                         <h3>Section 1</h3>
                     </div>

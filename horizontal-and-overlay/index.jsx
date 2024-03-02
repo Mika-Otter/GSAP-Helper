@@ -15,7 +15,6 @@ gsap.registerPlugin(ScrollTrigger);
 export default function App() {
     let sections = document.querySelectorAll(".overlaySection");
     let tl = gsap.timeline();
-
     let win = {
         w: window.width,
         h: window.height,

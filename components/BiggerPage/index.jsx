@@ -1,11 +1,5 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
-import { useGSAP } from "@gsap/react";
-
+import React from "react";
 import s from "./biggerPage.module.scss";
-
-gsap.registerPlugin(ScrollTrigger);
 
 export default function BiggerPage() {
     return (
