@@ -8,35 +8,31 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function ScrollSection() {
+    const rootRef = useRef();
     const sectionRef = useRef(null);
-    const triggerRef = useRef(null);
 
     useGSAP(() => {
-        const tween = gsap.fromTo(
-            sectionRef.current,
-            {
-                translateX: 0,
-            },
-            {
-                translateX: "-300vw",
+        let tween = gsap.fromTo(sectionRef.current, {
+                x: 0,
+            }, {
+                x: "-300vw",
                 ease: "none",
-                duration: 1,
-                scrollTrigger: {
-                    trigger: triggerRef.current,
-                    start: "top top",
-                    end: "2000 top",
-                    markers: true,
-                    scrub: 0.6,
-                    pin: true,
-                },
+                paused: true
             }
         );
-    }, []);
+        rootRef.current.scrollTriggerConfig = {
+            animation: tween,
+            start: "top top",
+            end: "+=2000",
+            scrub: 0.6,
+            pin: true
+        }
+    });
 
     return (
-        <section className={s.scroll__section_box}>
+        <section className={s.scroll__section_box} ref={rootRef}>
             <div ref={sectionRef}>
-                <div className={s.scroll__section_ctn} ref={triggerRef}>
+                <div className={s.scroll__section_ctn}>
                     <div className={s.scroll__ctn}>
                         <h3>Section 1</h3>
                     </div>
