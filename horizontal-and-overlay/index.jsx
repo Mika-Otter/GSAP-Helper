@@ -13,24 +13,22 @@ import s from "../src/global.module.scss";
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function App() {
-    let sections = document.querySelectorAll(".overlaySection");
-    let tl = gsap.timeline();
-    let win = {
-        w: window.width,
-        h: window.height,
-    };
 
     useGSAP(() => {
-        let sectionArr = gsap.utils.toArray(sections);
-        sectionArr.forEach((panel) => {
-            ScrollTrigger.create({
-                trigger: panel,
-                start: () => (panel.offsetHeight < win.h ? "top top" : "bottom bottom"),
+        let sectionArr = gsap.utils.toArray(".overlaySection");
+        sectionArr.pop(); // skip the last one.
+        sectionArr.forEach((panel, i) => {
+            let config = panel.firstChild.scrollTriggerConfig || {
+                id: i,
+                start: () => (panel.offsetHeight < window.innerHeight ? "top top" : "bottom bottom"),
+                end: "max",
                 pin: true,
                 pinSpacing: false,
-            });
+            };
+            config.trigger = panel;
+            ScrollTrigger.create(config);
         });
-    }, [tl]);
+    });
 
     return (
         <>
